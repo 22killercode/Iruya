@@ -1,0 +1,625 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Iruya Tour & Iruya pueblo</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <!-- Incluye la biblioteca Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- Incluye la biblioteca Bootstrap JS (opcional, pero puede ser necesaria para ciertas funcionalidades) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<!-- Header -->
+		<header id="header">
+			<div class="logo">
+				<p style="margin-left:0rem; text-align:left !important;font-weight: bold; text-size-adjust: 4rem; color: white;" href="index.html">Salta / Iruya Tour & Iruya pueblo</p>
+			</div>
+			<a href="#menu"><span>Menu</span></a>
+		</header>
+		<!-- Nav -->
+		<nav id="menu" style="background: linear-gradient(to left, rgb(233, 99, 46), rgb(255, 165, 0));">
+			<ul class="links" style="font-weight: bold;">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#contacto"> Los mejores Hostel´s en Iruya</a></li>
+				<li><a href="#one">      Gustavo Tour´s ¿Cómo llegar?</a></li>
+				<li><a href="#two">      Historia de Iruya</a></li>
+				<li><a href="#tree">     Clima & Geografía</a></li>
+				<li><a href="#Iru">      Tour´s a Iruya</a></li>
+				<li><a href="#punma">    Tour´s a Punmamarca</a></li>
+				<li><a href="#huma">     Tour´s a Humahuaca</a></li>
+				<li><a href="#four">     Nuestra comunidad & familia</a></li>
+				<li><a href="#four">     Contacto</a></li>
+			</ul>
+		</nav>
+		
+		<!-- // aviso de mensjae enviado -->
+		<div>
+			<style>
+				/* Estilos adicionales para resaltar el mensaje */
+				#mensajeEnvio {
+					position: fixed;
+					top: 0;
+					left: 0;
+					width: 100%;
+					background-color: #4CAF50; /* Color verde */
+					color: white;
+					padding: 15px;
+					text-align: center;
+					z-index: 1000; /* Asegura que aparezca por encima de otros elementos */
+					display: none; /* Inicialmente oculto */
+					font-size: 16px;
+				}
+
+				#cerrarMensaje {
+					position: absolute;
+					top: 5px;
+					right: 10px;
+					cursor: pointer;
+					font-size: 20px;
+				}
+			</style>
+			<div id="mensajeEnvio" style="z-index:999999999999999 !important">
+				<span id="cerrarMensaje" onclick="cerrarMensaje()">&times;</span>
+				Mensaje enviado exitosamente.
+			</div>
+			<script>
+				// Obtener la URL actual
+				var urlActual = window.location.href;
+
+				// Verificar si la URL contiene el fragmento deseado
+				if (urlActual.includes("#mensajeEnvio")) {
+					// Mostrar el div
+					document.getElementById("mensajeEnvio").style.display = "block";
+				}
+
+				// Función para cerrar el mensaje
+				function cerrarMensaje() {
+					document.getElementById("mensajeEnvio").style.display = "none";
+				}
+			</script>
+		</div>
+		
+		
+		
+		<!-- INICIO CARATULA************************* -->
+
+			<style>
+
+		
+				#carousel {
+					display: flex;
+					transition: transform 0.5s ease-in-out;
+					z-index: 9;
+				}
+		
+				.carousel-item {
+					min-width: 100%;
+					box-sizing: border-box;
+				}
+		
+				img,
+				video {
+					width: 100%;
+					height: auto;
+				}
+		
+				button {
+					position: absolute;
+					top: 50%;
+					font-size: 24px;
+					background: none;
+					border: none;
+					color: white;
+					cursor: pointer;
+				}
+		
+				#prevBtn {
+					left: 10px;
+				}
+		
+				#nextBtn {
+					right: 10px;
+				}
+			</style>
+
+		
+		<section id="banner" class="bg-img" data-bg="irufinal.jpg" style="z-index: 9;">
+			<div id="carousel">
+				<!-- Agrega elementos individuales del carrusel (fotos o videos) aquí -->
+				<div class="carousel-item">
+					<img src="images/iruEntrada.jpg" alt="Imagen 1">
+				</div>
+				<div class="carousel-item">
+					<!-- Inserta el video usando la etiqueta <video> -->
+					<video controls>
+						<source src="images/videos/panoramico.mp4" type="video/mp4">
+					</video>
+				</div>
+				<!-- Agrega más elementos según sea necesario -->
+			</div>
+			<button id="prevBtn" onclick="prevSlide()">❯</button>
+			<button id="nextBtn" onclick="nextSlide()">❮</button>
+		
+			<script>
+				let currentIndex = 0;
+		
+				function showSlide(index) {
+					const carousel = document.getElementById('carousel');
+					const totalSlides = carousel.children.length;
+		
+					if (index >= totalSlides) {
+						currentIndex = 0;
+					} else if (index < 0) {
+						currentIndex = totalSlides - 1;
+					} else {
+						currentIndex = index;
+					}
+		
+					const transformValue = `translateX(-${currentIndex * 100}%)`;
+					carousel.style.transform = transformValue;
+				}
+		
+				function prevSlide() {
+					showSlide(currentIndex - 1);
+				}
+		
+				function nextSlide() {
+					showSlide(currentIndex + 1);
+				}
+		
+				// Inicia con el primer slide
+				showSlide(0);
+			</script>
+			
+			<a href="#one1" class="more">boton</a>
+		</section>
+		
+	
+		
+	
+		
+
+
+
+
+
+
+		<div  style="color: white !important; text-align: justify !important;">
+			<!-- hostel´s -->
+			<section align="justify" id="one1" class="wrapper post bg-img" data-bg="cloud&ligth.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Los mejores Hostel´s de Iruya</h2>
+						</header>
+							<div class="row row-cols-1 row-cols-md-2 g-4">
+								<div class="col">
+								  <div class="card">
+									<img src="images/iglesia.webp" class="card-img-top" alt="...">
+									<div class="card-body">
+									  <h5 class="card-title">El zorrito</h5>
+									  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									</div>
+								  </div>
+								</div>
+								<div class="col">
+								  <div class="card">
+									<img src="images/iglesia.webp" class="card-img-top" alt="...">
+									<div class="card-body">
+									  <h5 class="card-title">Esperanza</h5>
+									  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									</div>
+								  </div>
+								</div>
+							</div>		
+					</article>
+				</div>
+				<a href="#llegar" class="more">boton</a>
+			</section>
+
+			<!-- como llegar -->
+			<section align="justify" id="llegar" class="wrapper post bg-img" data-bg="cloud&ligth.jpg" style="z-index: 1;">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Como llegar a Iruya</h2>
+						</header>
+						<div>
+							<a href="https://www.google.com/maps/@-22.7917722,-65.2150811,1199m/data=!3m1!1e3?entry=ttu">
+								<img src="images/mapaIru.jpg" alt="" style=" width:30rem !important; height:auto; border-radius: 1rem !important">
+							</a>
+						</div>
+						<br>
+						<p>Para abrir el mapa has click en la imagen</p>
+						<p>Descubre la belleza de Iruya, Salta, Argentina. Desde la ciudad de Salta, toma la Ruta Nacional 9 hacia el norte hasta llegar a Humahuaca. Luego, continúa por la Ruta Provincial 13, disfrutando de impresionantes paisajes montañosos y serpenteantes caminos que te llevarán a Iruya. El viaje, aunque pintoresco, puede ser desafiante, pero la recompensa es un destino auténtico, con calles empedradas y casas de adobe enclavadas en las montañas.</p>
+					</article>
+				</div>
+				<a href="#hst" class="more">boton</a>
+			</section>
+
+			
+			<!-- Historia de Iruya -->
+			<section align="justify" id="hst" class="wrapper post bg-img" data-bg="cloud&ligth.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+						<h2>Historia de Iruya</h2>
+						</header>
+						<style>
+							.container {
+								display: flex;
+								flex-direction: column;
+								width: 100%;
+							}
+							@media only screen and (min-width: 600px) {
+								/* Aplicar el orden normal en dispositivos mayores a 600px */
+								.container {
+								flex-direction: row;
+								}
+					
+								.content {
+								width: 50% !important;
+								padding: 0.5rem;
+								margin: 0.5rem;
+								}
+					
+								#1 {
+								order: 1;
+								}
+					
+								#2 {
+								order: 2;
+								}
+							}
+							@media only screen and (max-width: 600px) and (orientation: portrait) {
+								/* Expandir al máximo en dispositivos móviles en modo retrato */
+								.content {
+								width: 100% !important;
+								padding: 0.5rem;
+								margin: 0.5rem;
+								}
+							}
+						</style>
+						<div class="container">
+							<div id="1" class="content" style="text-align:justify">
+								Iruya, un encantador pueblo en la provincia de Salta, Argentina, tiene raíces precolombinas y una rica historia colonial. Sus calles empedradas y casas de adobe reflejan la herencia cultural de los omaguacas y las misiones jesuitas. Rodeado de majestuosas montañas, Iruya ofrece un paisaje impresionante y una autenticidad única. La región, dedicada principalmente a la agricultura y la ganadería, ha preservado su encanto gracias a su aislamiento relativo. Hoy, atrae a turistas en busca de experiencias genuinas y la oportunidad de explorar senderos de montaña, visitar la histórica iglesia y sumergirse en la cultura local, creando una experiencia única y auténtica.
+							</div>
+							<div id="2" class="content">
+								<img src="images/iru4calle.jpg" style="border-radius: 1rem;width: 77%; height: auto;" alt="">
+							</div>
+						</div>
+						<footer align="left">
+							<a href="historia.html" class="button alt">Saber más</a>
+						</footer>
+
+					</article>
+				</div>
+				<a href="#tree" class="more">boton</a>
+			</section>
+
+			<!-- Clima y Geografia -->
+			<section id="tree" class="wrapper post bg-img" data-bg="skyand.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Clima & Geografia</h2>
+						</header>
+						<div class="container">
+								<div class="content" style="text-align:justify">
+									<p>
+										Iruya disfruta de un clima templado durante todo el año, con estaciones marcadas. Los meses de primavera y otoño son ideales, con temperaturas agradables y menos lluvias. En verano, las precipitaciones aumentan, brindando un verdor exuberante a la región. Durante el invierno, las noches pueden ser frescas, pero los días suelen ser soleados. La geografía montañosa de Iruya ofrece paisajes espectaculares, con calles empedradas que serpentean entre casas de adobe, creando una atmósfera encantadora. Para disfrutar plenamente de la belleza y las actividades al aire libre, la primavera y el otoño son las estaciones más recomendables para visitar este rincón mágico de Salta, Argentina.
+									</p>
+								</div>
+                                <!-- YouTube video -->
+                                <div class="video-container mb-3">
+                                    <br><br>
+									<img src="images/clima.jpg" alt="" width="350" height="auto">
+                                </div>
+								<style>
+									iframe{
+										width:100% !important;
+									}
+								</style>
+								<div class=" content video-container" hidden>
+									<br>
+									<iframe width="140%" height="80%" src="https://www.youtube.com/embed/5SUvpJ2zUrE" frameborder="0" allowfullscreen style="border-radius: 1rem;">
+									</iframe>
+								</div>
+						</div>
+					</article>
+				</div>
+				<a href="#Iru" class="more" >boton</a>
+			</section>
+
+			<!-- tour a iruya -->
+			<section id="Iru" class="wrapper post bg-img" data-bg="skyand.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Tour a Iruya</h2>
+						</header>
+
+					<div class="container">
+						<div class="content">
+							<p>
+								Descubre la joya escondida de Iruya, Salta, Argentina, en un tour lleno de magia y maravillas. Desde la imponente Iglesia San Roque hasta las callejuelas empedradas de la Plaza Principal, cada rincón de Iruya cuenta una historia única. Adéntrate en una caminata emocionante hacia la Cruz del Avellano, siente la emoción al cruzar el Puente Colgante y sumérgete en la exuberante naturaleza de la Quebrada de San Vicente. Relájate junto al Río Iruya, explora el Cerro San Isidro y sumérgete en la autenticidad de los Barrios Tradicionales. Descubre la riqueza del Mercado Artesanal y explora senderos naturales. ¡Vive la experiencia única de Iruya con nosotros!
+							</p>
+						</div>
+						<div class="video-container">
+							<br><br>
+							<video id="myVideo" autoplay loop>
+								<source src="images/videos/panoramico.mp4" type="video/mp4">
+							</video>
+							<!-- para reproducir el video -->
+							<script>
+								// Obtén el elemento de video
+								const myVideo = document.getElementById('myVideo');
+					
+								// Escucha el evento 'ended' (cuando el video ha terminado) y reinicia la reproducción
+								myVideo.addEventListener('ended', function () {
+									myVideo.currentTime = 0; // Reinicia al inicio del video
+									myVideo.play(); // Reproduce nuevamente
+								});
+					
+								// Inicia la reproducción del video
+								myVideo.play();
+							</script>
+						</div>
+					</div>
+						
+						
+						<footer align="left">
+							<a href="Iruya.html" class="button alt">Ver tour Iruya</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#huma" class="more">boton</a>
+			</section>
+			
+			
+			<!-- tour a Humahuaca -->
+			<section id="huma" class="wrapper post bg-img" data-bg="skyand.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Tour a Humahuaca</h2>
+						</header>
+						<div class="container">
+								<div class="content" style="text-align:justify">
+									<p>
+										Embárcate en un fascinante recorrido guiado desde Salta capital hacia la majestuosa región de Humahuaca y Purmamarca. Iniciamos nuestra travesía explorando el pintoresco pueblo de Purmamarca, hogar del imponente Cerro de los Siete Colores, la icónica Iglesia y el bullicioso Mercado Artesanal. Disfrutaremos de la historia en la Posta de Hornillos antes de continuar hacia Huacalera, donde cruzaremos el Trópico de Capricornio y maravillaremos con los colores del Cerro la Pollera de la Colla.
+									</p>
+								</div>
+                                <!-- YouTube video -->
+                                <div class="video-container mb-3">
+                                    <br>
+                                    <iframe width="560rem" height="280rem" src="https://youtube.com/embed/lmo8NoHaT7E?si=jlQrWpAflVklaf0-" frameborder="0" allowfullscreen></iframe>
+                                </div>
+								<style>
+									iframe{
+										width:100% !important;
+									}
+								</style>
+								<div class=" content video-container" hidden>
+									<br>
+									<iframe width="140%" height="80%" src="https://www.youtube.com/embed/5SUvpJ2zUrE" frameborder="0" allowfullscreen style="border-radius: 1rem;">
+									</iframe>
+								</div>
+						</div>
+						<footer align="left">
+							<a href="humahuaca.html" class="button alt">Ver tour</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#pumamarca" class="more" >boton</a>
+			</section>
+			<!-- tour a punmamarca -->
+			<style>
+				.container {
+					display: flex;
+					flex-wrap: wrap;
+				}
+			
+				.content {
+					flex: 1;
+					text-align: justify;
+					margin-right: 10px;
+					margin-bottom: 20px;
+				}
+			
+				.video-container {
+					flex: 1;
+					margin-bottom: 20px;
+				}
+			
+				iframe {
+					width: 100% !important;
+				}
+			</style>
+			
+			<section id="pumamarca" class="wrapper post bg-img" data-bg="skyand.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Tour a Purmamarca</h2>
+						</header>
+						<div class="container">
+							<div class="content">
+								<p>
+									Embárcate en un fascinante recorrido guiado desde Salta capital hacia la deslumbrante región de Purmamarca y sus tesoros. Comenzaremos nuestra travesía explorando el pintoresco pueblo de Purmamarca, hogar del imponente Cerro de los Siete Colores, la icónica Iglesia y el bullicioso Mercado Artesanal. Disfrutaremos de la historia en la Posta de Hornillos antes de continuar hacia Huacalera, donde cruzaremos el Trópico de Capricornio y nos maravillaremos con los colores del Cerro la Pollera de la Colla.
+								</p>
+							</div>
+							<!-- YouTube video -->
+							<div class="video-container mb-3">
+								<br>
+								<iframe width="560rem" height="280rem" src="https://youtube.com/embed/WhWVHzsyuj8" frameborder="0" allowfullscreen></iframe>
+							</div>
+							<style>
+								iframe {
+									width: 100% !important;
+								}
+							</style>
+							<div class="content video-container" hidden>
+								<br>
+								<iframe width="140%" height="80%" src="https://www.youtube.com/embed/5SUvpJ2zUrE" frameborder="0" allowfullscreen style="border-radius: 1rem;"></iframe>
+							</div>
+						</div>
+						<footer align="left">
+							<a href="purmamarca.html" class="button alt">Ver tour</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#four" class="more">boton</a>
+			</section>
+			
+			<!-- comnidad & familai -->
+			<section id="four" class="wrapper post bg-img" data-bg="luzcielo.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+						<h2>Comunidad & familia</h2>
+						</header>
+						<style>
+							.container {
+								display: flex;
+								flex-direction: column;
+								width: 100%;
+							}
+							@media only screen and (min-width: 600px) {
+								/* Aplicar el orden normal en dispositivos mayores a 600px */
+								.container {
+								flex-direction: row;
+								}
+					
+								.content {
+								width: 50% !important;
+								padding: 0.5rem;
+								margin: 0.5rem;
+								}
+					
+								#1 {
+								order: 1;
+								}
+					
+								#2 {
+								order: 2;
+								}
+							}
+							@media only screen and (max-width: 600px) and (orientation: portrait) {
+								/* Expandir al máximo en dispositivos móviles en modo retrato */
+								.content {
+								width: 100% !important;
+								padding: 0.5rem;
+								margin: 0.5rem;
+								}
+							}
+							video {
+				border-radius: 1rem;
+				width: 100%; /* Hace que el video ocupe el 100% del contenedor */
+				height: auto;
+
+			}
+						</style>
+					<div class="container">
+						<div id="1" class="content" style="text-align:justify">
+							La comunidad de Iruya se caracteriza por su arraigada identidad y estrechos lazos comunitarios. En nuestro pintoresco pueblo de la provincia de Salta, Argentina, los habitantes preservan tradiciones ancestrales y valores culturales. La vida en Iruya se desenvuelve con ritmo pausado, donde la solidaridad y el sentido de comunidad son fundamentales. Sus calles empedradas y casas de adobe reflejan la autenticidad de una vida sencilla. La población, aunque pequeña, se destaca por su hospitalidad, recibiendo a los visitantes con calidez. Iruya es un testimonio vivo de la preservación cultural y la convivencia armoniosa en la región.
+						</div>
+					<div id="2" class="content">
+				<div class="">
+					<br>
+					<img src="images/enelaltar.jpg" alt="" style="border-radius: 1rem;">
+				</div>
+			</div>
+		</div>
+						<footer align="left">
+							<a href="comunidad.html" class="button alt">Saber más</a>
+						</footer>
+					</article>
+				</div>
+				<a href="#banner" class="more">boton</a>
+			</section>
+		</div>	
+
+		<!-- Footer -->
+		<footer id="footer"  style="background-color: skyblue; color: black !important;">
+			<div class="inner" id="contacto">
+				<h2>Contacto</h2>
+				<form action="https://tbs-it.net/mensajedecontactosdenuestrosclientes/claveClienteTropiluz" method="post">
+				<!-- <form action="http://localhost:3009/mensajedecontactosdenuestrosclientes/claveClienteTropiluz" method="post"> -->
+					<input type="text" value="744108/5220963.0" name="tbstk" hidden>
+					<div class="field half first">
+						<label for="name" style=" color: black !important; font-weight: bold;">Nombre</label>
+						<input style="border-color: black !important; color:black" name="nombre" id="name" type="text" placeholder="Name">
+					</div>
+					<div class="field half">
+						<label for="email" style=" color: black !important; font-weight: bold;">Email</label>
+						<input style="border-color: black !important; color:black" name="email" id="email" type="email" placeholder="Email">
+					</div>
+					<div class="field half first">
+						<label for="name" style=" color: black !important; font-weight: bold;">País y ciudad</label>
+						<input style="border-color: black !important; color:black" name="ciudad" id="cudad" type="text" placeholder="Name">
+					</div>
+					<div class="field half">
+						<label for="email" style=" color: black !important; font-weight: bold;">Celular</label>
+						<input style="border-color: black !important; color:black" name="numCel" id="numCel" type="text" placeholder="numero de celular">
+					</div>
+					<div class="field">
+						<label for="message" style=" color: black !important; font-weight: bold;">Mensage</label>
+						<textarea style="border-color: black !important; " name="mensaje" id="message" rows="6" placeholder="Message"></textarea>
+                    </div>
+					<ul class="actions">
+						<li>
+							<input style="border-color: black !important; " value="Enviar mensaje" class="button alt" type="submit">
+						</li>
+					</ul>
+				</form>
+
+				<style>
+					.contact-info {
+						max-width: 600px;
+						margin: 0 auto;
+					}
+			
+					.contact-info p {
+						margin: 10px 0;
+					}
+			
+					.contact-info a {
+						color: #fff;
+						text-decoration: underline;
+					}
+				</style>
+                <footer align="center"> 
+					<div class="contact-info" style="font-size: 1rem;">
+						<p>TROPILUZ</p>
+						<p>Director: Mario Julio Pereyra</p>
+						<p>Departamento de Canelones, Barros Blancos, Uruguay</p>
+						<p>Cel: +598 9659 9747</p>
+						<p>Email: <a href="mailto:email.ampj67507@gmail.com">email.ampj67507@gmail.com</a></p>
+					</div>
+					<br>
+					<div align="center" >
+						<a href="https://tbs-it.net/">
+							<img src="images/TBS-IT1.jpg" style="width:22%; height:auto">
+							<p>By Sebastian Paysse for TBS-IT</p>
+						</a>
+					</div>
+				</footer>
+			</div>
+		</footer>
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
